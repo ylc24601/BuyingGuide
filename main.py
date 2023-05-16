@@ -23,7 +23,7 @@ def main():
     st.title("Buying Guide")
     st.markdown("使用說明: 建議先將確定數量或單價較高的品項扣除，較不重要的次品項再以此程式計算之")
     st.warning("總金額與單價數值勿相差過大，否則將大幅增加計算時間!")
-    total_budget = st.number_input("Total Budget (總預算)", min_value=300)
+    total_budget = st.number_input("Total Budget (總預算)", value=300)
     spread = st.number_input("Spread (與預算差額)", min_value=0)
     prices = st.text_input("Prices (物品單價，以逗點分隔)", "52, 39, 45, 17, 44")
     prices = [int(price.strip()) for price in prices.split(",")]
